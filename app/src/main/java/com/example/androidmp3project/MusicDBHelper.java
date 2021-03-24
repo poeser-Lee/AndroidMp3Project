@@ -120,7 +120,8 @@ public class MusicDBHelper extends SQLiteOpenHelper {
                 // db에 속해있는 요소인지 확인
                 if (dbList.contains(data) == false) {
 
-                    String query = "INSERT INTO musicTBL VALUES('" + data.getId() + "','" + data.getArtist() + "','" + data.getTitle() + "','" + data.getAlbumCover() + "','" + data.getDuration() + "'," + 0 + "," + 0 + ");";
+                    String query = "INSERT INTO musicTBL VALUES('" + data.getId() + "','" + data.getArtist() + "'," +
+                            "'" + data.getTitle() + "','" + data.getAlbumCover() + "','" + data.getDuration() + "'," + 0 + "," + 0 + ");";
 
                     // 쿼리문 작성해서 넘김
                     // 예외발생시 SQLException
@@ -142,7 +143,8 @@ public class MusicDBHelper extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
 
         try {
-            String query = "UPDATE musicTBL SET click = " + musicData.getPlayCount() + ", liked = " + musicData.getLiked() + " WHERE id = '" + musicData.getId() + "';";
+            String query = "UPDATE musicTBL SET click = " + musicData.getPlayCount() + ", liked = "
+                    + musicData.getLiked() + " WHERE id = '" + musicData.getId() + "';";
             sqLiteDatabase.execSQL(query);
 
             returnValue = true;

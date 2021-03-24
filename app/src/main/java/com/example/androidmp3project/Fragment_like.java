@@ -85,7 +85,7 @@ public class Fragment_like extends Fragment {
         recyclerView_like.setAdapter(musicAdapter);
         recyclerView_like.setLayoutManager(linearLayoutManager);
     }
-
+    //View 아이디
     private void findViewByIdFunc(View view) {
         recyclerView_like = view.findViewById(R.id.recyclerView_like);
         drawerLayout = view.findViewById(R.id.drawerLayout);
