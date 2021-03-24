@@ -242,7 +242,7 @@ public class MainActivity extends AppCompatActivity{
                 }
                 dbHelper.updateMusicDataToDB(musicData);
             } catch (Exception e) {
-                Toast.makeText(getApplicationContext(), "제대로 선택해주세요", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "음악을 선택해주세요", Toast.LENGTH_SHORT).show();
             }
         });
     }
